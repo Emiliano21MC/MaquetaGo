@@ -1,0 +1,9 @@
+import {Text,View} from 'react-native';
+import {LinearGradient} from 'expo-linear-gradient';
+export function VirtualCard({brand,last4,holder,expiry}:{brand:string|null;last4:string;holder:string;expiry:string}){return <LinearGradient colors={['#0F2537','#125764','#00A896']} start={{x:0,y:0}} end={{x:1,y:1}} style={{padding:24,borderRadius:20,gap:25,overflow:'hidden'}}>
+ <View style={{position:'absolute',width:210,height:210,borderRadius:105,borderWidth:1,borderColor:'#FFFFFF20',right:-60,top:-70}}/>
+ <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}><Text style={{color:'#D3F9F1',fontSize:11,fontWeight:'600',letterSpacing:2}}>MAQUETAGO</Text><Text style={{color:'white',fontSize:19,fontWeight:'800',fontStyle:brand==='Visa'?'italic':'normal'}}>{brand||'TARJETA'}</Text></View>
+ <View style={{width:38,height:29,borderRadius:7,backgroundColor:'#D5C69A',borderWidth:1,borderColor:'#F6ECCC',justifyContent:'center'}}><View style={{height:1,backgroundColor:'#A79A77'}}/><View style={{position:'absolute',left:12,height:'100%',width:1,backgroundColor:'#A79A77'}}/><View style={{position:'absolute',right:12,height:'100%',width:1,backgroundColor:'#A79A77'}}/></View>
+ <Text style={{color:'white',fontSize:21,fontWeight:'600',letterSpacing:2,fontVariant:['tabular-nums']}}>•••• •••• •••• {last4||'••••'}</Text>
+ <View style={{flexDirection:'row',justifyContent:'space-between',gap:12}}><View style={{flex:1,gap:5}}><Text style={{color:'#B7D7D9',fontSize:9,letterSpacing:1}}>TITULAR</Text><Text numberOfLines={1} style={{color:'white',fontSize:12,fontWeight:'600'}}>{holder.trim().toUpperCase()||'NOMBRE DEL TITULAR'}</Text></View><View style={{gap:5}}><Text style={{color:'#B7D7D9',fontSize:9,letterSpacing:1}}>VENCE</Text><Text style={{color:'white',fontSize:12}}>{expiry||'MM/AA'}</Text></View></View>
+ </LinearGradient>;}

@@ -1,0 +1,3 @@
+Yape logo. Source: https://www.yape.com.pe/images/components/component-25/logo.png
+Website: https://www.yape.com.pe/
+Used to identify Yape in the MaquetaGo payment simulation.

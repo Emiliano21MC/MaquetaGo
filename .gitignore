@@ -48,3 +48,6 @@ example
 # generated native folders
 /ios
 /android
+
+# Certificado público de AWS RDS necesario para validar TLS.
+!backend/certs/aws-rds-us-east-1-bundle.pem
